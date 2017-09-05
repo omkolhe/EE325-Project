@@ -14,16 +14,17 @@ int main ()
   double index = 0;
   // set some values (from 1 to 10)
   for (i=1; i<=n; i++) deck.push_back(i);
+
   cout << "Deck contains:";
   for (i=0; i<deck.size(); i++)
     cout << " " << deck[i];
   cout << endl;
 
-  // erase the 6th element
-  //deck.erase (deck.begin()+5);
+  cout << "Permutation :";
+  for(int j=0;j<n;j++)
+    cout << " " << per[j];
+  cout << endl;
 
-  // erase the first 3 elements:
-  //deck.erase (deck.begin(),deck.begin()+3);
   for(int j=1;j<n;j++)
   {
     double n_1_fac = factorial(n-j);
@@ -37,11 +38,7 @@ int main ()
 
   cout << index;
 
-/**  cout << "Deck contains:";
-  for (i=0; i<deck.size(); i++)
-    cout << " " << deck[i];
-  cout << endl;
-  */
+
 
   return 0;
 }
@@ -71,3 +68,10 @@ double factorial(int n)
 
   return fact;
 }
+
+/**erase the 6th element
+deck.erase (deck.begin()+5);
+
+erase the first 3 elements:
+deck.erase (deck.begin(),deck.begin()+3);
+*/
